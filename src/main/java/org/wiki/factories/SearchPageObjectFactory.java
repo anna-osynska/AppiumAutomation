@@ -9,7 +9,7 @@ import org.wiki.pages.pageObjects.SearchPageObject;
 public class SearchPageObjectFactory {
 
     public static SearchPageObject get() {
-        if (Platform.isAndroid()) {
+        if (Platform.isAndroid() || Platform.isAndroidBrowserstack()) {
             return new SearchPageAndroid();
         } else {
             return new SearchPageIOS();

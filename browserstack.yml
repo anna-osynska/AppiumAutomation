@@ -1,0 +1,24 @@
+userName: annaosynska_hPi9a1
+accessKey: URAjTJqUSwb3iknGPwZd
+framework: junit5
+app: bs://6a9c8ea334afbca6df580b6b9fff15c431855c08
+#app: bs://54ec76c6c87fb354e74d14d4226a26390e257ad5
+platforms:
+#  - platformName: ios
+#    deviceName: iPhone 15 Pro
+#    platformVersion: 17
+#  - platformName: ios
+#    deviceName: iPhone XS
+#    platformVersion: 15
+  - platformName: android
+    deviceName: Google Pixel 7 Pro
+    platformVersion: 13.0
+parallelsPerPlatform: 1
+browserstackLocal: false
+buildName: browserstack-build-1
+projectName: AppiumAutomation
+
+# Test Observability is an intelligent test reporting & debugging product. It collects data using the SDK. Read more about what data is collected at https://www.browserstack.com/docs/test-observability/references/terms-and-conditions
+# Visit observability.browserstack.com to see your test reports and insights. To disable test observability, specify `testObservability: false` in the key below.
+testObservability: true
+source: java:intellij:v1.1.4

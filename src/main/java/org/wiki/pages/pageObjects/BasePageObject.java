@@ -86,8 +86,8 @@ public abstract class BasePageObject {
     }
 
     public void swipeUntilElementFound(By el, AppiumDriver driver) {
-        var counter = 15;
-        var alreadyUsed = 0;
+        int counter = 15;
+        int alreadyUsed = 0;
         while (driver.findElements(el).isEmpty()) {
             if (alreadyUsed > counter) {
                 driver.findElement(el);

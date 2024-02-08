@@ -7,7 +7,7 @@ import org.wiki.pages.pageObjects.WelcomePageObject;
 
 public class WelcomePageObjectFactory {
     public static WelcomePageObject get() {
-        if(Platform.isAndroid()) {
+        if(Platform.isAndroid() || Platform.isAndroidBrowserstack()) {
             return new WelcomePageAndroid();
         }
         else return new WelcomePageIOS();

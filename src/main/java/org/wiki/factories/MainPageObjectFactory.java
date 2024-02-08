@@ -7,7 +7,7 @@ import org.wiki.pages.pageObjects.MainPageObject;
 
 public class MainPageObjectFactory {
     public static MainPageObject get(){
-        if(Platform.isAndroid()) {
+        if(Platform.isAndroid() || Platform.isAndroidBrowserstack()) {
             return new MainPageAndroid();
         }
         else return new MainPageIOS();
