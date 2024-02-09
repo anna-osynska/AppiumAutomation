@@ -72,8 +72,8 @@ public class Platform {
 
     private static UiAutomator2Options getIOSBrowserstackOptions() {
         UiAutomator2Options options = new UiAutomator2Options();
-        options.setCapability("browserstack.user", "annaosynska_hPi9a1");
-        options.setCapability("browserstack.key", "URAjTJqUSwb3iknGPwZd");
+        options.setCapability("browserstack.user", getBrowserstackUser());
+        options.setCapability("browserstack.key", getBrowserstackKey());
         options.setOrientation(ScreenOrientation.PORTRAIT);
         options.setAutomationName(AutomationName.IOS_XCUI_TEST);
         return options;
@@ -81,8 +81,8 @@ public class Platform {
 
     private static MutableCapabilities getAndroidBrowserstackOptions() {
         UiAutomator2Options options = new UiAutomator2Options();
-        options.setCapability("browserstack.user", "annaosynska_hPi9a1");
-        options.setCapability("browserstack.key", "URAjTJqUSwb3iknGPwZd");
+        options.setCapability("browserstack.user", getBrowserstackUser());
+        options.setCapability("browserstack.key", getBrowserstackKey());
         options.setOrientation(ScreenOrientation.PORTRAIT);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         return options;
@@ -106,5 +106,13 @@ public class Platform {
 
     private static String getPlatform() {
         return System.getenv("PLATFORM").toUpperCase();
+    }
+
+    private static String getBrowserstackUser() {
+        return System.getenv("userName");
+    }
+
+    private static String getBrowserstackKey() {
+        return System.getenv("accessKey");
     }
 }
